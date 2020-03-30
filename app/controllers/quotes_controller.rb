@@ -1,4 +1,4 @@
-class QuotesController < ApplicationController
+class QuotesController < OpenReadController
   before_action :set_quote, only: %i[show update destroy]
 
   # GET /quotes
