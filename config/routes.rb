@@ -2,8 +2,7 @@
 
 Rails.application.routes.draw do
   # RESTful routes
-  # examples resource removed from template
-  # resources :examples, except: %i[new edit]
+  resources :quotes, except: %i[new edit]
 
   # Custom routes
   post '/sign-up' => 'users#signup'
