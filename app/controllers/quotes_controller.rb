@@ -48,6 +48,6 @@ class QuotesController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def quote_params
-      params.require(:quote).permit(:text, :author, :cipher, :difficulty, :user_id)
+      params.require(:quote).permit(:text, :author, :cipher, :difficulty, :title, :user_id)
     end
 end

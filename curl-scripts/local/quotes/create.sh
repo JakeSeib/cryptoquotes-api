@@ -7,7 +7,11 @@ curl "http://localhost:4741/quotes" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "quote": {
-      "text": "'"${TEXT}"'"
+      "text": "'"${TEXT}"'",
+      "author": "'"${TEXT}"'",
+      "title": "'"${TEXT}"'",
+      "cipher": "abcdefghijklmnopqrstuvwxyz",
+      "difficulty": "1"
     }
   }'
 
