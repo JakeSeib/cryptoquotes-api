@@ -5,7 +5,7 @@ class SolvedQuotesController < ProtectedController
 
   # GET /solved_quotes
   def index
-    @character_skills = current_user.solved_quotes.all
+    @solved_quotes = current_user.solved_quotes.all
 
     render json: @solved_quotes
   end
@@ -27,13 +27,13 @@ class SolvedQuotesController < ProtectedController
   end
 
   # PATCH/PUT /solved_quotes/1
-  def update
-    if @solved_quote.update(solved_quote_params)
-      render json: @solved_quote
-    else
-      render json: @solved_quote.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @solved_quote.update(solved_quote_params)
+  #     render json: @solved_quote
+  #   else
+  #     render json: @solved_quote.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /solved_quotes/1
   def destroy

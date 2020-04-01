@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   # RESTful routes
   resources :quotes, except: %i[new edit]
-  resources :solved_quotes, except: %i[new edit]
+  resources :solved_quotes, except: %i[new edit update]
 
   # Custom routes
   post '/sign-up' => 'users#signup'
